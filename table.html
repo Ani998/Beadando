@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Táblázat Menü</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="table.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Táblázat Menü</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="table.html" class="active">Táblázat</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <h2>Táblázat CRUD funkcióval</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">ID</th>
+                    <th onclick="sortTable(1)">Név</th>
+                    <th onclick="sortTable(2)">Kor</th>
+                    <th onclick="sortTable(3)">Magasság</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dinamikusan generált sorok -->
+            </tbody>
+        </table>
+
+        <h3>Új adat hozzáadása</h3>
+        <form id="createForm">
+            <input type="text" id="name" placeholder="Név" required>
+            <input type="number" id="age" placeholder="Kor" required>
+            <input type="number" id="height" placeholder="Magasság" required>
+            <button type="submit">Hozzáadás</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Ondó Vivien - O4NEQB </p>
+        <p>Trinyik Anikó - EA1HYA </p>>
+    </footer>
+</body>
+</html>

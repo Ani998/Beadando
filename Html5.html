@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Menük</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HTML5 API Menük</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="html5.html" class="active">HTML5 Menük</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <h2>Web Storage Példa</h2>
+        <button onclick="saveData()">Adatok mentése a Web Storage-ba</button>
+        <button onclick="loadData()">Adatok betöltése a Web Storage-ból</button>
+        <div id="storageOutput"></div>
+    </div>
+
+    <footer>
+        <p>Ondó Vivien - O4NEQB </p>
+        <p>Trinyik Anikó - EA1HYA </p>>
+    </footer>
+
+    <script>
+        function saveData() {
+            localStorage.setItem('username', 'JohnDoe');
+            alert('Adatok elmentve!');
+        }
+
+        function loadData() {
+            const username = localStorage.getItem('username');
+            document.getElementById('storageOutput').textContent = 'Mentett név: ' + username;
+        }
+    </script>
+</body>
+</html>
